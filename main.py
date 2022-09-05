@@ -69,7 +69,7 @@ def look_f2():
         print("-------------------")
         d.find_element(By.XPATH, "//*[@id='pageS']/pagination-template/ul/li[8]/a").click()
         x = 1
-        time.sleep(2)
+        time.sleep(1)
     if found == False:
         print("The element has not found")
     close_driver(d)
@@ -93,7 +93,7 @@ def print_all_f3():
                 print(*row)
 
         d.find_element(By.XPATH, "//*[@id='pageS']/pagination-template/ul/li[8]/a").click()
-        time.sleep(2)
+        time.sleep(1)
     close_driver(d)
 
 def reload_f4():
@@ -122,7 +122,7 @@ def reload_f4():
                     # print(row)
                     writer.writerow(row)
             d.find_element(By.XPATH, "//*[@id='pageS']/pagination-template/ul/li[8]/a").click()
-            time.sleep(2)
+            time.sleep(1)
         print("Data has been reloaded in the scv file")
     close_driver(d)
 
@@ -130,6 +130,7 @@ def correct_page(driver) -> str:
     print("correct page")
     d: WebDriver = driver
     d.get(Link)
+
     time.sleep(1)
     driver.find_element(By.XPATH,
                         "//*[@id='trades_panel1']/article/div[1]/top-indices/table/tbody/tr[3]/td[1]/a").click()
